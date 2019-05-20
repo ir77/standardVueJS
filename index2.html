@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8"> 
+        <title>Vue.js App</title>
+        <link rel="stylesheet" href="main.css">
+    </head>
+    <body>
+        <p>--------------------------------------------------------------------------</p>
+        <div id="section8">
+            <input type="text" v-bind:value.sync="message">
+            <input type="text" :value.sync="message">
+            <p>{{ count }}した！！！！</p>
+            <button v-on:click="increment">＋</button>
+        </div>
+        <p>--------------------------------------------------------------------------</p>
+        <div id="section6">
+            <h1>{{ message }}</h1>
+            <h1>{{ computedMessage }}</h1>
+        </div>
+        <p>--------------------------------------------------------------------------</p>
+        <div id="section5">
+            <h1>{{ message }}</h1>
+            <input v-model="message">
+            <ol>
+                <li v-for="item in list">{{ item }}</li>
+            </ol>
+            <button v-on:click="handleClick">Click</button>
+            <button v-on:click="show=!show">切り替え</button>
+            <transition>
+                <p v-if="show">Hello Vue.js! transion</p>
+            </transition>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+        <script src="main.js"> </script>
+    </body>
+</html>
