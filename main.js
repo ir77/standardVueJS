@@ -1,8 +1,30 @@
+var app4 = new Vue({
+    el: '#section9',
+    data: {
+        message: 'section9',
+    }
+})
+
 var app3 = new Vue({
     el: '#section8',
     data: {
         message: 'section8',
-        count: 0
+        count: 0,
+        isChild: true,
+        isActive: true,
+        textColor: 'red',
+        bgColor: 'lightgray',
+
+        classObject: {
+            child: true,
+            'is-active': true,
+        },
+        styleObject: {
+            color: 'red',
+            backgroundColor: 'lightgray',
+        },
+
+        radius: 50
     },
     methods: {
         increment: function() {
