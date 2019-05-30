@@ -7,9 +7,50 @@
     </head>
     <body>
         <p>--------------------------------------------------------------------------</p>
+        <div id="section12">
+            <h1>{{ message }}</h1>
+        </div>
+
+        <p>--------------------------------------------------------------------------</p>
+
+        <div id="section11">
+            <h1 ref="hello">{{ message }}</h1>
+        </div>
+
+        <p>--------------------------------------------------------------------------</p>
+
+        <div id="section10">
+            <h1>{{ message }}</h1>
+            <ul>
+                <li v-for="(item, index) in list" 
+                    v-bind:key="item.id"
+                    v-if="item.hp > 300"
+                    v-bind:class="{ tuyoi: item.hp > 300 }">
+                    {{ index }} ID.{{ item.id }} {{ item.name }} HP.{{ item.hp }}
+                    <span v-if="item.hp > 300">つよい！！！</span>
+                </li>
+                <span v-for="item in 15">{{ item }}</span>
+                <li v-for="item in 15">{{ item }}</li>
+            </ul>
+            <!-- <ul>
+                <li v-for="(item, index) in list2" 
+                    v-bind:key="item.id">
+                    {{ index }} ID.{{ item.id }} {{ item.name }} HP.{{ item.hp }}
+                </li>
+            </ul> -->
+        </div>
+
+        <p>--------------------------------------------------------------------------</p>
 
         <div id="section9">
-            <h1>{{ message }}</h1>
+            <template v-if="ok">
+                <h1>{{ message }}</h1>
+                <h1>{{ message }}</h1>
+            </template>
+            <template v-else>
+                <h1>{{ ok }}</h1>
+                <h1>{{ ok }}</h1>
+            </template>
         </div>
 
         <p>--------------------------------------------------------------------------</p>

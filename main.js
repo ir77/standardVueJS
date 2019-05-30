@@ -1,7 +1,47 @@
+var app12 = new Vue({
+    el: '#section12',
+    data: {
+        message: 'section12',
+    },
+})
+
+var app11 = new Vue({
+    el: '#section11',
+    data: {
+        message: 'section11',
+    },
+    mounted: function() {
+        console.log(this.$el);
+        console.log(this.$refs.hello);
+    }
+})
+
+var app10 = new Vue({
+    el: '#section10',
+    data: {
+        message: 'section10',
+        list: [
+            { id: 1, name: 'スライム1', hp: 100},
+            { id: 2, name: 'スライム2', hp: 101},
+            { id: 3, name: 'スライム3', hp: 301},
+        ],
+        list2: []
+    },
+    // created: function() {
+    //     axios.get('list.json').then(function(response) {
+    //         this.list2 = response.data
+    //     }.bind(this)).catch(function(e) {
+    //         console.log(e);
+    //     })
+    // }
+
+})
+
 var app4 = new Vue({
     el: '#section9',
     data: {
         message: 'section9',
+        ok: false
     }
 })
 
