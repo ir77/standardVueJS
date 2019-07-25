@@ -1,3 +1,15 @@
+var app13 = new Vue({
+    el: '#section13',
+    data: {
+        message: 'section13',
+    },
+    methods: {
+        handleClick: function() {
+            alert('clicked!!!')
+        }
+    }
+})
+
 var app12 = new Vue({
     el: '#section12',
     data: {
